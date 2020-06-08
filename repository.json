@@ -1,5 +1,5 @@
 {
   "name": "Hass.io AutoSSH Modified",
-  "url": "https://github.com/analogist/hassio-autossh-mod",
-  "maintainer": "James Wu <contact@analogist.net>"
+  "url": "https://github.com/amirv/ha-autossh.git",
+  "maintainer": "Amir Vadai <amir@vadai.me>"
 }
