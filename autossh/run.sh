@@ -50,6 +50,13 @@ ssh-keyscan -p $SSH_PORT $HOSTNAME || true
 
 command_args="${command_args} ${OTHER_SSH_OPTIONS}"
 
+echo "[INFO] Setting gatetime to disabled"
+export AUTOSSH_GATETIME=0
+
 echo "[INFO] command args: ${command_args}"
 # start autossh
-/usr/bin/autossh ${command_args}
+while [ 1 ] ; do
+	/usr/bin/autossh ${command_args}
+	echo "[ERROR] autossh exited ($?). respawning"
+	sleep 30s
+done
